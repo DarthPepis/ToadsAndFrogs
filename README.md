@@ -17,12 +17,12 @@ Spustíte je v IDE spuštěním tohoto filu
 
 ## Struktura projektu
 - Python aplikace:
-    složka app:
-    - `main.py` – spuštění programu  
-    - `gui.py` – grafické rozhraní  
-    - `game_state.py` – logika hry  
-    - `ai.py` – minimax + alfa-beta pruning  
-    - `testing.py` – ruční testy, nemají vliv na funkčnost aplikace, pouze zkoumají její přesnost
+    - `složka app`:
+        - `main.py` – spuštění programu  
+        - `gui.py` – grafické rozhraní  
+        - `game_state.py` – logika hry  
+        - `ai.py` – minimax + alfa-beta pruning  
+        - `testing.py` – ruční testy, nemají vliv na funkčnost aplikace, pouze zkoumají její přesnost
 
 - Doprovodné dokumenty:
     - `programatorskadokumentace.pdf` - programátorská dokumentace k programu
