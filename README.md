@@ -4,7 +4,7 @@ včetně jednoduchého GUI, AI hráče (minimax + alfa-beta pruning),
 programátorské dokumentace, uživatelské dokumentace a ručních testů.
 
 ## Spuštění programu
-Program se spouští souborem: app/main.py
+Program se spouští v libovolném IDE, tlačítkem RUN přes soubor: app/main.py
 po spuštění programu se otevře setup okno, kde si tlačítky zvolíte rozměry hrací desky,
 následně zvolíte režim hráč vs AI nebo AI vs AI, poté se vám zobrazí start tlačítko,
 jehož stisknutím zahájíte hru. Hra se ovládá kliknutím na políčko, kterým chcete táhnout(vlastní figurkou)
@@ -25,7 +25,6 @@ Spustíte je v IDE spuštěním tohoto filu
     - `testing.py` – ruční testy, nemají vliv na funkčnost aplikace, pouze zkoumají její přesnost
 
 - Doprovodné dokumenty:
-    složka docs:
     - `programatorskadokumentace.pdf` - programátorská dokumentace k programu
     - `userguide.pdf` - dokument pro spuštění a ovládání programu
 
