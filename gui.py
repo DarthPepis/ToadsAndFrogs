@@ -41,7 +41,7 @@ class ToadsAndFrogsGUI:
             frame.pack(pady=5)
 
             #nazev řadku
-            label = tk.Label(frame, text = label, width = 15)
+            label = tk.Label(frame, text = label, width = 15) #text = label takže při volani add_row() davame text
             label.pack(side = tk.LEFT) #cely řadek zarovnavame doleva
 
             def minus_click():
@@ -108,7 +108,7 @@ class ToadsAndFrogsGUI:
         tk.Label(self.setup, text="Režim hry:").pack(pady=5)
 
         tk.Button(self.setup, text="Hráč vs AI",
-          command=lambda: self.set_mode("HUMAN_VS_AI")).pack(pady=2)
+          command=lambda: self.set_mode("HUMAN_VS_AI")).pack(pady=2) #nemusim někde bokem tvořit funkci na přepsani modu :)
 
         tk.Button(self.setup, text="AI vs AI",
           command=lambda: self.set_mode("AI_VS_AI")).pack(pady=2)
@@ -183,7 +183,8 @@ class ToadsAndFrogsGUI:
             btn = tk.Button(self.board_frame, text=text, width=4, height=2, command=lambda idx=i: self.on_click(idx) 
             )
             #tvořime tlačitko pro každy frame v 1xn poli
-            btn.grid(row=0, column=i, padx=2, pady=2)
+            btn.grid(row=0, column=i, padx=2, pady=2) # misto klasickeho pack() a zarovnavani davame do mřižky za sebe
+
 
         if self.state.current_player == 1:
             self.info_label.config(text="Na tahu: hráč 1 (Toads)")
@@ -233,7 +234,7 @@ class ToadsAndFrogsGUI:
         else:
             self.show_illegal_move()
             self.selected_index = None
-            return  # DŮLEŽITÉ – zastaví funkci dřive než dojde k update_board, aby nesmazal hlášku v info_label
+            return  # DŮLEŽITÉ – zastaví funkci dřive než dojde k update_board z else větve
 
         self.selected_index = None #po tahu
         self.update_board()

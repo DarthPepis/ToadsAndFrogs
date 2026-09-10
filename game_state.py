@@ -6,9 +6,10 @@ class Move:
         self.from_idx = from_idx
         self.to_idx = to_idx
 
-    #funkce na vypsani find_best_move()
+    #funkce na vypsani find_best_move(), po zavolani print(move) se vypíše pouze adresa, 
+    # python vola __repr__ ale ta neexistuje
     def __repr__(self):
-        return f"Move(from_idx = {self.from_idx}, to_idx = {self.to_idx})"
+        return f"Move(from_idx = {self.from_idx}, to_idx = {self.to_idx})" #vypíše Move(from_idx, to_idx)
 
 class GameState:
     def __init__(self, board: List[str], current_player: int = 1):
@@ -33,7 +34,7 @@ class GameState:
             piece = 'F'
             direction = -1
 
-        for i, cell in enumerate(self.board):
+        for i, cell in enumerate(self.board): #vraci index a hodnotu
             if cell == piece:
                 #pokud btn na board je piece ktery chceme
                 # krok
@@ -50,6 +51,7 @@ class GameState:
                     0 <= jump_over < len(self.board)
                     and 0 <= jump_to < len(self.board)
                     and self.board[jump_over] in ('T', 'F')
+                    and self.board[jump_over] != piece
                     and self.board[jump_to] == '.'
                 ):
                     moves.append(Move(i, jump_to)) #tedy každy prvek pole moves je jedna instance třidy Move
